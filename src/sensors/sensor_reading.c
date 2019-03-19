@@ -30,41 +30,9 @@ void delay_ms(uint32_t period);
 
 spi_device_handle_t spi;
 
-/*
-int
-app_main()
-{
-	struct bme280_dev dev;
-	uint8_t sensor_comp;
-	struct bme280_data comp_data;
-	int rc;
-
-	// failwith "Students, this is your job!
-	// make the right calls in order to get sensor-readings from the bme280
-	rc = ENOSYS;
-
-	printf("L'initialisation s'est très bien déroulée\ndev_");
-
-	sensor_comp = 7; //Get all measurements, i.e. temp, hum and pres
-	while (1) {
-		rc = bme280_get_sensor_data(sensor_comp, &comp_data, &dev);
-		if (rc < 0) {
-			printf("Error: failled to read data from sensor\n");
-			exit(EXIT_FAILURE);
-		}
-
-		printf("temperature = %f DegC\n", (float)comp_data.temperature/100);
-		printf("humidity = %f %%RH\n", (float)comp_data.humidity/1024);
-		printf("pressure = %f Pa\n", (float)comp_data.pressure/256);
-	}
-
-	return rc;
-}
-*/
-
 /* définitions des fonctions */
 int8_t
-initialize_spi_sensor()  // FIXME .._spi_communication()
+initialize_spi_communication()
 {
     int8_t rc;
 

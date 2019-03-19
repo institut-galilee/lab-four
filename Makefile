@@ -16,7 +16,7 @@
 
 
 PROJECT_NAME := iot-labs
-EXTRA_COMPONENT_DIRS := $(PWD)/lib $(PWD)/include
+EXTRA_COMPONENT_DIRS := $(PWD)/lib
 SRCDIRS := src
 
 include $(IDF_PATH)/make/project.mk
